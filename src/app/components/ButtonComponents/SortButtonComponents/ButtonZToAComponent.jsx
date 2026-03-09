@@ -1,9 +1,12 @@
 "use client";
 import React from "react";
 
-export default function ZToAComponent() {
+export default function ButtonZToAComponent() {
   return (
-    <button className="hover:text-yellow-300" onClick={()=>alert("You click on Z to A Button Sort")}>
+    <button
+      className="hover:text-yellow-300"
+      onClick={() => alert("You click on Z to A Button Sort")}
+    >
       <svg
         xmlns="http://www.w3.org/2000/svg"
         width="24"

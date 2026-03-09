@@ -2,7 +2,7 @@
 
 import React from "react";
 
-export default function AToZComponent() {
+export default function ButtonAToZComponent() {
   return (
     <button
       className="hover:text-yellow-300"

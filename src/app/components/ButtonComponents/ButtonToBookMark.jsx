@@ -3,7 +3,11 @@ import React from "react";
 
 export default function ButtonToBookMark() {
   return (
-    <button onClick={()=>{alert("You click save to book mark")}}>
+    <button
+      onClick={() => {
+        alert("You click save to book mark");
+      }}
+    >
       <svg
         xmlns="http://www.w3.org/2000/svg"
         width="24"
