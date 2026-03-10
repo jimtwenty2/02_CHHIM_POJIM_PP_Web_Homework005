@@ -34,7 +34,6 @@ export default function Home() {
             <BackButtonComponent setShowSavedOnly={setShowSavedOnly} />
             <div className="flex gap-4">
               <ButtonYourBookMarkComponent
-                showSavedOnly={showSavedOnly}
                 setShowSavedOnly={setShowSavedOnly}
               />
               <ButtonAToZComponent
