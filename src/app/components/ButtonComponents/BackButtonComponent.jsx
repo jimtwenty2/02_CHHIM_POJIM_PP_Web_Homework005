@@ -1,8 +1,7 @@
 "use client";
 import React from "react";
-
-export default function BackButtonComponent({setShowSavedOnly}) {
-  function handleOnClick(){
+export default function BackButtonComponent({ setShowSavedOnly }) {
+  function handleOnClick() {
     setShowSavedOnly(false);
   }
   return (
