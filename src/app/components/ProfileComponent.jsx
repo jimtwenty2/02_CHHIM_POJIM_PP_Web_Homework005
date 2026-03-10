@@ -1,5 +1,4 @@
 import React from "react";
-
 export default function ProfileComponent() {
   return (
     <div className="flex items-center gap-3">

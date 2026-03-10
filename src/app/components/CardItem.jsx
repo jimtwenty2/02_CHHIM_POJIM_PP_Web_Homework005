@@ -1,4 +1,3 @@
-"use client";
 import ButtonSaveToBookMark from "./ButtonComponents/ButtonSaveToBookMark";
 import ButtonViewComponent from "./ButtonComponents/ButtonViewComponent";
 export default function CardItem({
