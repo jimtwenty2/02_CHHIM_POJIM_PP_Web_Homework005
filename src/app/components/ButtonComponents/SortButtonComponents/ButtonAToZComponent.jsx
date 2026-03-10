@@ -1,13 +1,20 @@
 "use client";
-
 import React from "react";
-
-export default function ButtonAToZComponent() {
+import { items } from "../../../data";
+export default function ButtonAToZComponent({ setItemList }) {
+  function handleSortFromAToZ() {
+    const sortedItems = [...items];
+    sortedItems.sort((a, b) => {
+      let itemNameA = a.item_name;
+      let itemNameB = b.item_name;
+      if (itemNameA > itemNameB) return 1;
+      else if (itemNameA < itemNameB) return -1;
+      return 0;
+    });
+    setItemList(sortedItems);
+  }
   return (
-    <button
-      className="hover:text-yellow-300"
-      onClick={() => alert("You click on A to Z Button Sort")}
-    >
+    <button className="hover:text-yellow-300" onClick={handleSortFromAToZ}>
       <svg
         xmlns="http://www.w3.org/2000/svg"
         width="24"

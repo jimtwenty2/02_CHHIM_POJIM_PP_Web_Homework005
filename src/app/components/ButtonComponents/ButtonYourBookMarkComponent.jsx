@@ -1,11 +1,14 @@
 "use client";
 import React from "react";
 
-export default function ButtonYourBookMarkComponent() {
+export default function ButtonYourBookMarkComponent({ setShowSavedOnly }) {
+  function handleOnClick() {
+    setShowSavedOnly(true);
+  }
   return (
     <button
       className="font-semibold text-white hover:text-yellow-300"
-      onClick={() => alert("hi")}
+      onClick={handleOnClick}
     >
       <div className="flex items-center justify-center gap-2">
         <p>Your Bookmark</p>

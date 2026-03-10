@@ -1,12 +1,20 @@
 "use client";
 import React from "react";
-
-export default function ButtonZToAComponent() {
+import { items } from "../../../data";
+export default function ButtonZToAComponent({ setItemList }) {
+  function handleSortFromZToA() {
+    const sortedItems = [...items];
+    sortedItems.sort((a, b) => {
+      let itemNameA = a.item_name;
+      let itemNameB = b.item_name;
+      if (itemNameA > itemNameB) return -1;
+      else if (itemNameA < itemNameB) return 1;
+      return 0;
+    });
+    setItemList(sortedItems);
+  }
   return (
-    <button
-      className="hover:text-yellow-300"
-      onClick={() => alert("You click on Z to A Button Sort")}
-    >
+    <button className="hover:text-yellow-300" onClick={handleSortFromZToA}>
       <svg
         xmlns="http://www.w3.org/2000/svg"
         width="24"
