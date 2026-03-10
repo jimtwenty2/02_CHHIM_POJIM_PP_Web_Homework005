@@ -15,6 +15,12 @@ export default function Home() {
   const [itemsList, setItemList] = useState(items);
   const [itemToShow, setItemToShow] = useState({});
   const [showSavedOnly, setShowSavedOnly] = useState(false);
+  useEffect(() => {
+    console.log("Mounted");
+    return () => {
+      console.log("Unmounted");
+    };
+  }, [itemsList, showSavedOnly]);
   return (
     <div className="flex flex-col bg-gray-950 h-screen text-white gap-3">
       <div className="flex w-full bg-gray-900 justify-between px-3">
@@ -31,8 +37,14 @@ export default function Home() {
                 showSavedOnly={showSavedOnly}
                 setShowSavedOnly={setShowSavedOnly}
               />
-              <ButtonAToZComponent setItemList={setItemList} />
-              <ButtonZToAComponent setItemList={setItemList} />
+              <ButtonAToZComponent
+                itemsList={itemsList}
+                setItemList={setItemList}
+              />
+              <ButtonZToAComponent
+                itemsList={itemsList}
+                setItemList={setItemList}
+              />
             </div>
           </div>
           <CardItem

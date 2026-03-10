@@ -1,9 +1,8 @@
 "use client";
 import React from "react";
-import { items } from "../../../data";
-export default function ButtonZToAComponent({ setItemList }) {
+export default function ButtonZToAComponent({ itemsList, setItemList }) {
   function handleSortFromZToA() {
-    const sortedItems = [...items];
+    const sortedItems = [...itemsList];
     sortedItems.sort((a, b) => {
       let itemNameA = a.item_name;
       let itemNameB = b.item_name;

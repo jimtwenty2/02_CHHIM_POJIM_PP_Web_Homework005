@@ -1,9 +1,8 @@
 "use client";
 import React from "react";
-import { items } from "../../../data";
-export default function ButtonAToZComponent({ setItemList }) {
+export default function ButtonAToZComponent({ itemsList,setItemList }) {
   function handleSortFromAToZ() {
-    const sortedItems = [...items];
+    const sortedItems = [...itemsList];
     sortedItems.sort((a, b) => {
       let itemNameA = a.item_name;
       let itemNameB = b.item_name;
